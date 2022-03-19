@@ -1,0 +1,54 @@
+<section>
+  <div class="col-xxl-8 mx-auto px-4 ">
+  {{#each cookies}}
+    <div style="max-height: 200px;" class="card bg-light text-dark my-4 pt-2 overflow-auto ">
+      <ul class="row p-0 m-0">
+        <li class="col-lg-2 d-flex justify-content-lg-start align-items-lg-start">
+          <div>
+            <h5>Cookie</h5>
+            {{#if this.cookie_name}}
+             <p>{{this.cookie_name}}</p>
+             {{else}}
+             <p>Unknown cookie</p>
+            {{/if}}
+          </div>
+        </li>
+        <li class="col-lg-2 d-flex justify-content-lg-start align-items-lg-start">
+          <div>
+            <h5>Domain</h5>
+            {{#if this.url}}
+              <p>{{this.url}}</p>
+              {{else}}
+              <p>Unknown domain</p>
+            {{/if}}
+          </div>
+        </li>
+        <li class="col-lg-2 d-flex justify-content-lg-start align-items-lg-start">
+          <div>
+            <h5>Type</h5>
+            {{#if this.category}}
+              <p>{{this.category}}</p>
+              {{else}}
+              <p>Unknown category</p>
+            {{/if}}
+          </div>
+        </li>
+        <li class="col-lg-6 d-flex justify-content-lg-start align-items-lg-start">
+          <div>
+            <h5>Description</h5>
+            {{#if this.script_description}}
+              <p>{{this.script_description}}</p>
+              {{else}}
+              <p>Description unavailable</p>
+            {{/if}}
+          </div>
+        </li>
+      </ul>
+    </div>
+  {{/each}}
+  </div>
+</div>
+</section>
+    
+
+
